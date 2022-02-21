@@ -7,7 +7,10 @@ body{
     
 }
  
-
+.img-thumbnail{
+    height: 100px;
+    width: 100px;
+}
 #contacto{
     background-image: url('../images/fondo-contacto.png');
     background-size: 100%;
