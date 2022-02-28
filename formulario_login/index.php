@@ -9,8 +9,7 @@ if($_POST){
     $clave = $_REQUEST["txtClave"];
 
     if($usuario != "" && $clave != ""){
-
-        header("location formulario_login/acceso-confirmado.php");
+        header("location: acceso-confirmado.php");
     } else {     
         $mensaje = "Válido para usuarios registrados";
     }
