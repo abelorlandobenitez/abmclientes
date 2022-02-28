@@ -3,10 +3,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-if($_POST) { //si el usuario hace clik
+if($_POST){ //si el usuario hace clik
 
-    $usuario = $_REQUEST["txtusuario"]); // request respueta devuelve usuario tipeado
-    $clave = $_REQUEST["txtclave"];
+    $usuario = $_REQUEST["txtUsuario"]; // request respueta devuelve usuario tipeado
+    $clave = $_REQUEST["txtClave"];
 
     //si usuario es distinto de vacio y clave es distinto de vacio sino : muestra mensaje
 
@@ -49,7 +49,7 @@ if($_POST) { //si el usuario hace clik
                 <div class="alert alert-danger" role="alert">
             <?php echo $mensaje; ?> 
         </div>
-        <?php endif ?>
+        <?php endif; ?>
         <form method="POST" action="">
             <div class="my-3">
                 <label for="">Usuario: <input type="text" id="txtUsuario" name="txtUsuario"></label>
