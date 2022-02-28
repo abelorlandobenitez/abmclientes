@@ -12,7 +12,7 @@ if($_POST){ //si el usuario hace clik
 
     if($usuario != "" && $clave != ""){
 
-        header("location: acceso-confirmado.php"); // redirecciona a acceso-confirmado
+        header("location: formulario_invitados/formulario_login/acceso-confirmado.php"); // redirecciona a acceso-confirmado
     } else {
         $mensaje = "Válido para usuarios registrados.";
 
@@ -37,7 +37,7 @@ if($_POST){ //si el usuario hace clik
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Formulario</h1>
+                <h1 strong>Formulario<strong/h1>
 
             </div>
 
@@ -45,11 +45,9 @@ if($_POST){ //si el usuario hace clik
 
     <div class="row">
         <div class="col-12">
-            <?php if (isset($mensaje)) : ?>
-                <div class="alert alert-danger" role="alert">
-            <?php echo $mensaje; ?> 
-        </div>
-        <?php endif; ?>
+            <?php if (isset($mensaje)) { ?>
+                <div class="alert alert-danger" role="alert"><?php echo $mensaje; ?></div>
+        <?php } ?>
         <form method="POST" action="">
             <div class="my-3">
                 <label for="">Usuario: <input type="text" id="txtUsuario" name="txtUsuario"></label>
