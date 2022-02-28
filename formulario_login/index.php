@@ -8,7 +8,7 @@ if($_POST){
     $usuario = $_REQUEST["txtUsuario"];
     $clave = $_REQUEST["txtClave"];
 
-    if($usuario !="" && $clave !=""){
+    if($usuario != "" && $clave != ""){
 
         header("location formulario_login/acceso-confirmado.php");
     } else {     
@@ -37,7 +37,7 @@ if($_POST){
 
         </div>
         <div class="row">
-            <div class=col-12>
+            <div class="col-12">
                 <?php if(isset ($mensaje)){ ?>
 
                     <div class="alert alert-danger" role="alert">
@@ -51,19 +51,19 @@ if($_POST){
             <form method="POST" action="">
 
                 <div class="my-3">
-                    <label for="">Usuario: <input type="text"  id="txtUsuario" name="txtUsuario" ></label>
+                        <label for="">Usuario: <input type="text"  id="txtUsuario" name="txtUsuario" ></label>
                 </div> 
                 
                 <div class="my-3">
-                    <label for="">Clave: <input type="password"  id="txtClave" name="txtClave" ></label>
+                        <label for="">Clave: <input type="password"  id="txtClave" name="txtClave" ></label>
                 </div> 
 
                 <div class="my-3">
-                    <button class="btn btn-primary" type="submit">ENVIAR</button>
+                        <button class="btn btn-primary " type="submit">ENVIAR</button>
                 </div> 
                 
                 
-                </form>
+            </form>
             </div>
 
         </div>
