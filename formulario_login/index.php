@@ -37,7 +37,7 @@ if($_POST){
         </div>
         <div class="row">
             <div class="col-12">
-                <?php if(isset ($mensaje)){ ?>
+                <?php if(isset ($mensaje)): ?>
 
                     <div class="alert alert-danger text-center" role="alert">
                         
@@ -46,7 +46,7 @@ if($_POST){
 
                     </div>
 
-                <?php } ?>
+                <?php endif; ?>
             <form method="POST" action="">
 
                 <div class="py-3 ps-2 text-center">
