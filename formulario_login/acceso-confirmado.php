@@ -15,7 +15,7 @@
 
 <div class="row">
     <div class="col-12">
-        <h1 class="alert alert-primary">Bievenid@ al Sistema</h1>
+        <h1 class="alert alert-primary text-center">Bievenid@ al Sistema</h1>
 
     </div>
 

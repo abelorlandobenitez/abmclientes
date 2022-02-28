@@ -32,14 +32,14 @@ if($_POST){
     <div class="container"></div>
     <div class="row">
         <div class="col-12">
-            <h1>Formulario</h1>
+            <h1 class="text-center py-3">Formulario</h1>
 
         </div>
         <div class="row">
             <div class="col-12">
                 <?php if(isset ($mensaje)){ ?>
 
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-danger text-center" role="alert">
                         
                         <?php echo $mensaje; ?>
 
@@ -49,16 +49,18 @@ if($_POST){
                 <?php } ?>
             <form method="POST" action="">
 
-                <div class="my-3">
-                        <label for="">Usuario: <input type="text"  id="txtUsuario" name="txtUsuario" ></label>
+                <div class="py-3 ps-2 text-center">
+                    <label for="txtUsuario">Usuario:</label>
+                    <input type="text" name="txtUsuario" id="txtUsuario">
                 </div> 
                 
-                <div class="my-3">
-                        <label for="">Clave: <input type="password"  id="txtClave" name="txtClave" ></label>
+                <div class="py-3 ps-4 text-center">
+                    <label for="txtClave">Clave:</label>
+                    <input type="password" name="txtClave" id="txtClave">
                 </div> 
 
-                <div class="my-3">
-                        <button class="btn btn-primary " type="submit">ENVIAR</button>
+                <div class="py-3 ps-5 text-center">
+                    <button class="btn btn-primary " type="submit">ENVIAR</button>
                 </div> 
                 
                 
