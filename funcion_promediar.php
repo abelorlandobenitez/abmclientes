@@ -1,19 +1,29 @@
 <?php
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-
 function promediar($aNumeros){
     $suma = 0;
-    foreach($aNumeros as $numero){
+    foreach($aNumeros as $aNumero){
 
-        $suma += $numero;
+        $suma += $aNumero;
     }
-    return $suma / count($aNumeros);
+    $resultado = $suma / count($aNumeros);
 
 
 }
+    
+
+
+
+
+
+
+
+
+
 
 
