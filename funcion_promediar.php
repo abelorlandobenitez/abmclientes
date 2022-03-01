@@ -5,17 +5,30 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-function promediar($aNumeros){
+function promediar($aNumeros)
+{
     $suma = 0;
-    foreach($aNumeros as $aNumero){
+    foreach($aNumeros as $Numero){
 
-        $suma += $aNumero;
+        $suma += $Numero;
     }
-    $resultado = $suma / count($aNumeros);
+    return  $suma / count($aNumeros);
 
 
 }
     
+function maximo($aNumeros)
+{
+    $maximo = 0;
+    foreach ($aNumeros as $Numero) {
+        if($Numero > $maximo){
+            $maximo = $Numero;
+        }
+    }
+    return $maximo;
+
+}
+?>
 
 
 
