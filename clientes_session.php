@@ -10,6 +10,8 @@ if(!isset($_SESSION["clientes"])){ //guarda datos en memoria session_start()
 }
 
 if($_POST){
+
+    if(isset($_POST["btnEnviar"])){
     $_SESSION["clientes"][] = array( //[] array vacio
         
     "nombre" => $_REQUEST["txtNombre"],
@@ -17,6 +19,11 @@ if($_POST){
     "telefono" => $_REQUEST["txtTelefono"],
     "edad" => $_REQUEST["txtEdad"]
     );
+} else if(isset($_POST["btnBorrar"])){
+    session_destroy();
+    $_SESSION["clientes"] = array();// si no borra creo un nuevo array
+
+}
 }
 
 ?>
@@ -60,8 +67,13 @@ if($_POST){
                     </div>
 
                     <div class="my-3 text-center">
-                        <button type="submit" class="btn btn-primary">ENVIAR</button>
+                        <button type="submit" name="btnEnviar" class="btn btn-primary">ENVIAR</button>
+                        <button type="submit" name="btnBorrar" class="btn btn-primary">BORRAR</button>
+                        
                     </div>
+
+                    
+
 
                </form>
 
