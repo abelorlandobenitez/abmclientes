@@ -2,15 +2,15 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
 session_start();
 
-if(!isset($_SESSION["array"])){ //guarda datos en memoria session_start()
-   $_SESSION["array"] = array();
+
+if(!isset($_SESSION["clientes"])){ //guarda datos en memoria session_start()
+   $_SESSION["clientes"] = array();
 }
 
 if($_POST){
-    $_SESSION["array"][] = array( //[] array vacio
+    $_SESSION["clientes"][] = array( //[] array vacio
         
     "nombre" => $_REQUEST["txtNombre"],
     "dni" => $_REQUEST["txtDni"],
@@ -78,7 +78,7 @@ if($_POST){
                         
                     </tr>
 
-                    <?php foreach($_SESSION["array"] as $cliente): ?>
+                    <?php foreach($_SESSION["clientes"] as $cliente): ?>
                         <tr>
                             <td><?php echo $cliente["nombre"]; ?></td>
                             <td><?php echo $cliente["dni"]; ?></td>
