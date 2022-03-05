@@ -5,9 +5,9 @@ error_reporting ( E_ALL );
 
 //definicion de array de alumnos
 $Alumnos = array();
-$Alumnos[] = array("nombre" => "Juan Perez", "Notas" => array(8,9));
-$Alumnos[] = array("nombre" => "Ana Valle", "Notas" => array(10,4));
-$Alumnos[] = array("nombre" => "Gonzalo Roldan", "Notas" => array(7,6));
+$Alumnos[] = array("nombre" => "Juan Perez", "Notas" => array(5,10,3));
+$Alumnos[] = array("nombre" => "Ana Valle", "Notas" => array(10,3,4));
+$Alumnos[] = array("nombre" => "Gonzalo Roldan", "Notas" => array(7,8,8));
 
 
 
@@ -37,16 +37,17 @@ function  promediar ($Numeros){
     <div class="container"></div>
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center">Actas</h1>
+            <h1 class="text-center my-3">Actas</h1>
 
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 ps-4">
                 <table class="table border border-hover">
                     <th>ID</th>
                     <th>Alumno</th>
-                    <th>Nota 1</th>
+                    <th>Nota 1</th>          
                     <th>Nota 2</th>
+                    <th>Nota 3</th>
                     <th>Promedio</th>
                     <?php
                     $pos = 0;
@@ -54,6 +55,8 @@ function  promediar ($Numeros){
                     foreach($Alumnos as $Alumno):
 
                         $pos++;
+                        $promedio = promediar($Alumno["Notas"]);
+                        $sumpromedios += $promedio;
                     ?>
                         <tr>
 
@@ -61,11 +64,19 @@ function  promediar ($Numeros){
                             <td><?php echo $Alumno["nombre"]; ?></td>
                             <td><?php echo $Alumno["Notas"][0]; ?></td>
                             <td><?php echo $Alumno["Notas"][1]; ?></td>
-                            <td><?php echo number_format(promediar($Alumno["Notas"])); ?></td>
+                            <td><?php echo $Alumno["Notas"][2]; ?></td>
+                            <td><?php echo number_format($promedio, 2 , ",", "."); ?> </td> 
                         </tr>
                         
                     <?php endforeach; ?> 
                 </table>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="ps-3">El Promedio de la cursada es: <?php echo number_format($sumpromedios / count($Alumnos), 2 , ",", "."); ?> </h5>
+
+                </div>
 
             </div>
 
