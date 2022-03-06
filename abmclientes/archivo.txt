@@ -1,1 +1,1 @@
-{"1":{"dni":"26142686","nombre":"abel","telefono":"123112","correo":"abel@gmail.com","imagen":"2022022103024101.jpg"},"2":{"dni":"43434343","nombre":"jose","telefono":"233223","correo":"jose@hotmail.com","imagen":"2022022103023002.png"},"3":{"dni":"233232","nombre":"pablo","telefono":"3232332","correo":"pablo@gmail.com","imagen":"2022022103020803.jpg"},"4":{"dni":"434678887","nombre":"juan","telefono":"33222211","correo":"juan2@yahoo.com.ar","imagen":"2022022103025403.png"}}
+[]

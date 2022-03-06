@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 //si es un array lo recorro
 function print_f($variable) {
-    $archivo = fopen("datos.txt", "w+");
+    $archivo = fopen("datos.txt", "w+"); //escribe o lee un archivo sino crea uno nuevo
 
     if(is_array($variable)){
     foreach ($variable as $pos) {
@@ -15,7 +15,7 @@ function print_f($variable) {
         
     }
     } else {
-        
+        // guardo el contenido en el archivo datos.txt 
     file_put_contents("datos.txt", $variable);
     
   

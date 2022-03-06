@@ -107,19 +107,19 @@ if(isset($_GET["do"]) && $_GET["do"] == "eliminar"){
                <div class="col-6">
                    <form action="" method="POST" enctype="multipart/form-data">
                        <div>
-                           <label for="">Dni: *</label>
+                           <label for=""><strong> Dni: *</strong></label>
                            <input type="text" name="txtDni" id="txtDni" class="form-control" required value="<?php echo isset($aClientes[$id]["dni"])? $aClientes[$id]["dni"] : ""; ?>">
                        </div>
                        <div>
-                           <label for="">Nombre: *</label>
+                           <label for=""><strong>Nombre: *</strong></label>
                            <input type="text" name="txtNombre" id="txtNombre" class="form-control" required value="<?php echo isset($aClientes[$id]["nombre"])? $aClientes[$id]["nombre"] : ""; ?>">
                        </div>
                        <div>
-                           <label for="">Telefono:</label>
+                           <label for=""><strong>Telefono:</strong></label>
                            <input type="text" name="txtTelefono" id="txtTelefono" class="form-control" value="<?php echo isset($aClientes[$id]["telefono"])? $aClientes[$id]["telefono"] : ""; ?>"> 
                        </div>
                        <div>
-                           <label for="">Correo: *</label>
+                           <label for=""><strong>Correo: *</strong></label>
                            <input type="text" name="txtCorreo" id="txtCorreo" class="form-control" required value="<?php echo isset($aClientes[$id]["correo"])? $aClientes[$id]["correo"] : ""; ?>">
                        </div>
                        <div>
