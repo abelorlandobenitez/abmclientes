@@ -5,23 +5,25 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 //si es un array lo recorro
-function print_f($variable){
-    $archivo = fopen("datos.txt", "a+");
+function print_f($variable) {
+    $archivo = fopen("datos.txt", "w+");
 
     if(is_array($variable)){
-        foreach ($variable as $item) {
+    foreach ($variable as $pos) {
             
-        fwrite($archivo, $item. "\n");
-        }
-
-    }else {
+    fwrite($archivo, $pos. "\n");
         
-        fwrite($archivo , $variable . "\n");
+    }
+    } else {
+        
+    file_put_contents("datos.txt", $variable);
     
   
+
 }
 }
-$msg = "Este es un mensaje para vos abel";
+$msg = "mensaje para vos abel 44";
 
 print($msg);
+
 ?>
