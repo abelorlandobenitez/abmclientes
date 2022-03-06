@@ -22,8 +22,8 @@ function print_f($variable) {
 
 }
 }
-$msg = "mensaje para vos abel 44";
+$msg = "mensaje para vos abel 44 vamos";
 
-print($msg);
+printf($msg); //print o printf para imprimir mostrar algo en pantalla
 
 ?>
